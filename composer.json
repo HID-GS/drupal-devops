@@ -1,0 +1,38 @@
+{
+    "name": "hidgweb/drupal-devops",
+    "description": "A task runner for automating common Drupal development tasks.",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "HID Global Services",
+            "email": "webmaster@hidglobal.com",
+            "homepage" : "https://www.hidglobal.com/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HidGlobal\\DrupalDevOps\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HidGlobal\\DrupalDevOps\\": "tests/src"
+        }
+    },
+    "require": {
+        "consolidation/robo": "^1.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "cs": "phpcs",
+        "cbf": "phpcbf",
+        "unit": "phpunit",
+        "test": [
+            "@cs",
+            "@unit"
+        ]
+    }
+}
