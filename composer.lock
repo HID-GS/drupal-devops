@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bbb1c555bebe97a86882da64a41bcd0",
+    "content-hash": "7d611ab7014e7c15dc273d581c0f4467",
     "packages": [
         {
             "name": "consolidation/annotated-command",
@@ -2994,6 +2994,11 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": []
+    "platform": {
+        "php": ">=7.3.0"
+    },
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.3.0"
+    }
 }

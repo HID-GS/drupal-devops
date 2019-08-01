@@ -16,10 +16,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "HidGlobal\\DrupalDevOps\\": "tests/src"
+            "HidGlobal\\DrupalDevOps\\": "tests"
         }
     },
     "require": {
+        "php": ">=7.3.0",
         "consolidation/robo": "^1.4"
     },
     "require-dev": {
@@ -34,5 +35,11 @@
             "@cs",
             "@unit"
         ]
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.3.0"
+        }
     }
 }
