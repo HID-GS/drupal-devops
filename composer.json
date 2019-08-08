@@ -21,6 +21,7 @@
     },
     "require": {
         "php": ">=7.3.0",
+        "boedah/robo-drush": "^4.2",
         "consolidation/robo": "^1.4"
     },
     "require-dev": {

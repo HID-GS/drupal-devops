@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3462ba3c86cf50e840682a4b582b07b2",
+    "content-hash": "020ea672c14b33b569c080d841853fe7",
     "packages": [
+        {
+            "name": "boedah/robo-drush",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/boedah/robo-drush.git",
+                "reference": "1ce48694a5bd794bdc6fa006ee32e0a9bf693d52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/boedah/robo-drush/zipball/1ce48694a5bd794bdc6fa006ee32e0a9bf693d52",
+                "reference": "1ce48694a5bd794bdc6fa006ee32e0a9bf693d52",
+                "shasum": ""
+            },
+            "require": {
+                "consolidation/robo": "~1",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "drush/drush": "^8.0 | ^9.0",
+                "phpunit/phpunit": "~4.4"
+            },
+            "suggest": {
+                "drush/drush": "robo-drush needs a global or local Drush to use."
+            },
+            "type": "robo-tasks",
+            "autoload": {
+                "psr-4": {
+                    "Boedah\\Robo\\Task\\Drush\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Gasser",
+                    "email": "dev@boedah.de"
+                }
+            ],
+            "description": "Drush CommandStack for Robo Task Runner",
+            "time": "2018-12-11T14:42:40+00:00"
+        },
         {
             "name": "consolidation/annotated-command",
             "version": "2.12.0",
