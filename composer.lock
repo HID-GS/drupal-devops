@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e64b7b75c71a39078cbb5089c56de7ca",
+    "content-hash": "f5c72662d0198dcaa182a393910d6068",
     "packages": [
         {
             "name": "boedah/robo-drush",
@@ -3039,7 +3039,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.3.0"
+        "php": ">=7.3.0",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "platform-overrides": {
