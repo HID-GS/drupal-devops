@@ -14,6 +14,17 @@ class OutdatedTest extends TaskTestBase
     use LoadTasks;
 
     /**
+     * Test the `package` option.
+     */
+    public function testPackageOption()
+    {
+        $command = $this->taskComposerOutdated('composer')
+            ->package('drupal/core')
+            ->getCommand();
+        $this->assertEquals('composer outdated drupal/core', $command);
+    }
+
+    /**
      * Test the `all` option.
      */
     public function testAllOption()
