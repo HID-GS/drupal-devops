@@ -2,6 +2,7 @@
 
 namespace HidGlobal\DrupalDevOps\Robo\Plugin\Tasks\Composer;
 
+use Robo\Result;
 use Robo\Task\Composer\Base;
 
 /**
@@ -25,6 +26,21 @@ class Outdated extends Base
      * {@inheritdoc}
      */
     protected $action = 'outdated';
+
+    /**
+     * Allows for a single package or a group of packages to be inspected.
+     *
+     * @param string $package
+     *
+     * @return $this
+     */
+    public function package($package = '')
+    {
+        if (!empty($package)) {
+            $this->args($package);
+        }
+        return $this;
+    }
 
     /**
      * Adds `all` option.
