@@ -1,8 +1,7 @@
 <?php
 
-namespace HidGlobal\DrupalDevOps\Robo\Plugin\Tasks\Composer;
+namespace DrupalDevOps\Robo\Tasks\Composer;
 
-use Robo\Result;
 use Robo\Task\Composer\Base;
 
 /**

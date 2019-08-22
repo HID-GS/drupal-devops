@@ -1,9 +1,9 @@
 <?php
 
-namespace HidGlobal\DrupalDevOps\Tests\Unit\Tasks\Composer;
+namespace DrupalDevOps\Tests\Robo\Tasks\Composer;
 
-use HidGlobal\DrupalDevOps\Tests\Helpers\TaskTestBase;
-use HidGlobal\DrupalDevOps\Robo\Plugin\Tasks\Composer\LoadTasks;
+use DrupalDevOps\Tests\Helpers\TaskTestBase;
+use DrupalDevOps\Robo\Tasks\Composer\LoadTasks;
 
 /**
  * @covers \HidGlobal\DrupalDevOps\Robo\Plugin\Tasks\Composer\Outdated

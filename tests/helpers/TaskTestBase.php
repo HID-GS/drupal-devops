@@ -1,6 +1,6 @@
 <?php
 
-namespace HidGlobal\DrupalDevOps\Tests\Helpers;
+namespace DrupalDevOps\Tests\Helpers;
 
 use Robo\Robo;
 use Robo\TaskAccessor;

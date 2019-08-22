@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "HidGlobal\\DrupalDevOps\\": "src"
+            "DrupalDevOps\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "HidGlobal\\DrupalDevOps\\": "tests"
+            "DrupalDevOps\\": "tests"
         }
     },
     "require": {

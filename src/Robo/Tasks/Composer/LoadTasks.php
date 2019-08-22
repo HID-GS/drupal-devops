@@ -1,6 +1,6 @@
 <?php
 
-namespace HidGlobal\DrupalDevOps\Robo\Plugin\Tasks\Composer;
+namespace DrupalDevOps\Robo\Tasks\Composer;
 
 trait LoadTasks
 {
