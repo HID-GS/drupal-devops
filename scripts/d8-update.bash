@@ -16,7 +16,7 @@ function error() {
 }
 
 function logText() {
-  if [ $@ -gt 0 ]; then
+  if [ $# -gt 0 ]; then
     day=$(date "+%Y-%m-%d-%H-%M-%S")
     echo "$day - $@"
   fi
@@ -31,10 +31,16 @@ if [ $(git rev-parse --show-toplevel &> /dev/null; echo $?) -ne 0 ]; then
 fi
 
 MODULE="$1"
+MOD_UPD="${MODULE}"
+if [ $(echo ${MODULE} | grep '/' &> /dev/null; echo $?) -ne 0 ]; then
+  MOD_UPD="drupal/${MODULE}"
+fi
+
 MOD_MSG="$(if [ "${MODULE}" == "core" ]; then echo -ne "Drupal "; fi)${MODULE}"
 logText "Starting update process"
-logText "Looking to update ${MODULE}"
-composer update drupal/${MODULE} --with-dependencies && \
+logText "Looking to update ${MOD_UPD}"
+exit
+composer update ${MODULE} --with-dependencies && \
   git add -u && \
   git ci -m "secreview: Update ${MOD_MSG} to $(composer show drupal/${MODULE} | sed -ne 's/^version.* //gp')" && \
   git push
