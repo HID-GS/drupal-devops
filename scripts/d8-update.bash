@@ -32,16 +32,26 @@ fi
 
 MODULE="$1"
 MOD_UPD="${MODULE}"
-if [ $(echo ${MODULE} | grep '/' &> /dev/null; echo $?) -ne 0 ]; then
+if [ $(echo ${MODULE} | grep '/' &> /dev/null | wc -l) -ne 0 ]; then
   MOD_UPD="drupal/${MODULE}"
+fi
+
+logText "Checking for available packages"
+PACKAGES="$(composer show -loNDm 2> /dev/null)"
+if [ $(echo ${PACKAGES} | grep ${MOD_UPD} 2> /dev/null | wc -l) -le 0 ]; then
+  logText "${MOD_UPD} not found."
+  logText "Available packages:"
+  echo "${PACKAGES}"
+  echo ""
+  error "Package doesn't have a minor update available. Please check the package name."
+
 fi
 
 MOD_MSG="$(if [ "${MODULE}" == "core" ]; then echo -ne "Drupal "; fi)${MODULE}"
 logText "Starting update process"
 logText "Looking to update ${MOD_UPD}"
-exit
-composer update ${MODULE} --with-dependencies && \
+composer update ${MOD_UPD} --with-dependencies && \
   git add -u && \
-  git ci -m "secreview: Update ${MOD_MSG} to $(composer show drupal/${MODULE} | sed -ne 's/^version.* //gp')" && \
+  git ci -m "secreview: Update ${MOD_MSG} to $(composer show ${MOD_UPD} | sed -ne 's/^version.* //gp')" && \
   git push
 logText "Update process done"
